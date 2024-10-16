@@ -24,17 +24,17 @@ public class Main {
 
         library.depositBook(ebook);
 
-        System.out.println(library.getEbookArrayList().size());
+        System.out.println(library.getEbooks().size());
 
         library.depositBook(ebook1);
 
-        System.out.println(library.getEbookArrayList().size());
-        System.out.println(library.getEbookArrayList().getFirst().title);
+        System.out.println(library.getEbooks().size());
+        System.out.println(library.getEbooks());
 
         library.withdrawBook(ebook);
 
-        System.out.println(library.getEbookArrayList().size());
-        System.out.println(library.getEbookArrayList().getFirst().title);
+        System.out.println(library.getEbooks().size());
+        System.out.println(library.getEbooks());
     }
 }
 
