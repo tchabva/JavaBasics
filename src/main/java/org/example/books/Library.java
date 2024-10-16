@@ -15,17 +15,11 @@ public class Library {
             bookTitleList.add(book.title);
         }
 
-        if (!getEbooks().isEmpty()){
-            bookTitleList.addAll(getBooks());
-        }
+        bookTitleList.addAll(getEbooks());
 
-        if (!getGraphicNovels().isEmpty()){
-            bookTitleList.addAll(getGraphicNovels());
-        }
+        bookTitleList.addAll(getGraphicNovels());
 
-        if(!getSheetMusic().isEmpty()) {
-            bookTitleList.addAll(getSheetMusic());
-        }
+        bookTitleList.addAll(getSheetMusic());
 
         return bookTitleList;
     }
