@@ -8,8 +8,26 @@ public class Library {
     ArrayList<GraphicNovel> graphicNovelArrayList = new ArrayList<>();
     ArrayList<SheetMusic> sheetMusicArrayList = new ArrayList<>();
 
-    public ArrayList<Book> getBooks() {
-        return bookArrayList;
+    public ArrayList<String> getBooks() {
+        ArrayList<String> bookTitleList = new ArrayList<>();
+
+        for(var book : bookArrayList){
+            bookTitleList.add(book.title);
+        }
+
+        if (!getEbooks().isEmpty()){
+            bookTitleList.addAll(getBooks());
+        }
+
+        if (!getGraphicNovels().isEmpty()){
+            bookTitleList.addAll(getGraphicNovels());
+        }
+
+        if(!getSheetMusic().isEmpty()) {
+            bookTitleList.addAll(getSheetMusic());
+        }
+
+        return bookTitleList;
     }
     
     public ArrayList<String> getEbooks() {
@@ -28,8 +46,12 @@ public class Library {
         return graphicNovelTitleList;
     }
 
-    public ArrayList<SheetMusic> getSheetMusicArrayList(){
-        return sheetMusicArrayList;
+    public ArrayList<String> getSheetMusic(){
+        ArrayList<String> sheetMusicTitleList = new ArrayList<>();
+        for(var sheetMusic : sheetMusicArrayList){
+            sheetMusicTitleList.add(sheetMusic.title);
+        }
+        return sheetMusicTitleList;
     }
 
     //Create a deposit book to Library method.
