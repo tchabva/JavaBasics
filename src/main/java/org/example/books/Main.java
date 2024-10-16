@@ -23,6 +23,7 @@ public class Main {
         Library library = new Library();
 
         library.depositBook(ebook);
+        library.depositBook(book);
 
         System.out.println(library.getEbooks().size());
 
@@ -35,6 +36,8 @@ public class Main {
 
         System.out.println(library.getEbooks().size());
         System.out.println(library.getEbooks());
+
+        System.out.println(library.getBooks());
     }
 }
 
