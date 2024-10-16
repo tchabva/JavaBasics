@@ -8,16 +8,24 @@ public class Library {
     ArrayList<GraphicNovel> graphicNovelArrayList = new ArrayList<>();
     ArrayList<SheetMusic> sheetMusicArrayList = new ArrayList<>();
 
-    public ArrayList<Book> getBookArrayList() {
+    public ArrayList<Book> getBooks() {
         return bookArrayList;
     }
     
-    public ArrayList<Ebook> getEbookArrayList() {
-        return ebookArrayList;
+    public ArrayList<String> getEbooks() {
+        ArrayList<String> ebookTitleList = new ArrayList<>();
+        for(var ebook : ebookArrayList){
+            ebookTitleList.add(ebook.title);
+        }
+        return ebookTitleList;
     }
 
-    public ArrayList<GraphicNovel> getGraphicNovelArrayList(){
-        return graphicNovelArrayList;
+    public ArrayList<String> getGraphicNovels(){
+        ArrayList<String> graphicNovelTitleList = new ArrayList<>();
+        for(var graphicNovel : graphicNovelArrayList){
+            graphicNovelTitleList.add(graphicNovel.title);
+        }
+        return graphicNovelTitleList;
     }
 
     public ArrayList<SheetMusic> getSheetMusicArrayList(){
