@@ -19,11 +19,14 @@ public class Main {
         System.out.println(ebook.title);
         System.out.println(ebook.fileType);
 
+        Ebook convertedBook = Ebook.convertToEbook(book);
+
         //Creating an instance of library
         Library library = new Library();
 
         library.depositBook(ebook);
         library.depositBook(book);
+        library.depositBook(convertedBook);
 
         System.out.println(library.getEbooks().size());
 
