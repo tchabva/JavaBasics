@@ -33,6 +33,11 @@ class Ebook extends Book{
         super(title, pages);
         this.fileType = fileType;
     }
+
+    public static Ebook convertToEbook(Book book){
+
+        return new Ebook(book.title, book.pages, FileType.PDF);
+    }
 }
 
 class GraphicNovel extends Book{
